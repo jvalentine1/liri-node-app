@@ -47,6 +47,8 @@ function bandInTown() {
         console.log("\n");
         console.log(showInfo);
         console.log("\n");
+
+        logTxt();
     });
 }
 
@@ -70,6 +72,8 @@ function spotifySearch(term) {
           console.log("\n");
           console.log(trackInfo);
           console.log("\n");
+
+          logTxt();
     });
 }
 
@@ -95,6 +99,8 @@ function movieSearch() {
             console.log("\n");
             console.log(movieInfo);
             console.log("\n");
+
+            logTxt();
         });
     }
     else {
@@ -118,6 +124,8 @@ function movieSearch() {
             console.log("\n");
             console.log(movieInfo);
             console.log("\n");
+
+            logTxt();
         });
     }
 }
@@ -130,5 +138,6 @@ function doWhatItSays() {
 
         var response = data.split('\"');
         spotifySearch(response[1]);
+
     });
 }
