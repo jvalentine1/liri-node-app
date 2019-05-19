@@ -53,3 +53,24 @@ LIRI also has a *do-what-it-says* command that will pull default information fro
 LIRI also stores the information that the user has search by utilizing a text log as shown below
 
 ![text log](https://github.com/jvalentine1/liri-node-app/blob/master/images/log%20text%20gif.2019-05-19%2014_30_12.gif)
+
+## Setting up you machine 
+
+In order for Developers to access this application they will need to download the following npm packages. 
+
+    *npm install axios
+    *npm install moment
+    *npm install node-spotify-api
+    *npm install dotenv
+
+The user will then be required to create a .env folder in the appropriate directory where they will add their unique spotify client id and secret in order to access the spotify api. *.env folder setup below*
+
+        ```js
+            console.log('this is loaded');
+
+            exports.spotify = {
+                id: process.env.SPOTIFY_ID,
+                secret: process.env.SPOTIFY_SECRET
+            };
+        ```
+
