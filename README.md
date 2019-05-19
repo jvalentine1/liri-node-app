@@ -41,3 +41,10 @@ LIRI allows the user to access to the OMDB api by typing in *movie-this*, if the
 If the user provides a **movie title** after the *movie-this* request, then LIRI will provide information on the requested movie title as shown below. 
 
 ![omdb2](https://github.com/jvalentine1/liri-node-app/blob/master/images/movie%20search%20with%20title%20gif.2019-05-19%2011_45_33.gif)
+
+## Do What it Says
+
+LIRI also has a *do-what-it-says* command that will pull default information from designated api's stored in LIRI as shown below
+
+![do what it says](https://github.com/jvalentine1/liri-node-app/blob/master/images/do%20what%20it%20says%20gif.2019-05-19%2013_47_56.gif)
+
