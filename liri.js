@@ -143,5 +143,12 @@ function doWhatItSays() {
 }
 
 function logTxt(data) {
-    console.log(data);
+    fs.appendFile("log.txt", data, function(err) {
+        if(err) {
+            return console.log("Error Occurred: " + err);
+        }
+        else {
+            console.log("Content Added" + "\n");
+        }
+    })
 }
