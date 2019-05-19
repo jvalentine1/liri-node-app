@@ -48,3 +48,8 @@ LIRI also has a *do-what-it-says* command that will pull default information fro
 
 ![do what it says](https://github.com/jvalentine1/liri-node-app/blob/master/images/do%20what%20it%20says%20gif.2019-05-19%2013_47_56.gif)
 
+## Information Log 
+
+LIRI also stores the information that the user has search by utilizing a text log as shown below
+
+![text log](https://github.com/jvalentine1/liri-node-app/blob/master/images/log%20text%20gif.2019-05-19%2014_30_12.gif)
