@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 var keys = require("./keys.js");
 var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
@@ -90,6 +91,7 @@ function movieSearch() {
                 "Actors: " + data.Actors,
                 "Plot: " + data.Plot
             ].join("\n");
+
             console.log("\n");
             console.log(movieInfo);
             console.log("\n");
@@ -112,6 +114,7 @@ function movieSearch() {
                 "Actors: " + data.Actors,
                 "Plot: " + data.Plot
             ].join("\n");
+
             console.log("\n");
             console.log(movieInfo);
             console.log("\n");
