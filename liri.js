@@ -150,5 +150,5 @@ function logTxt(data) {
         else {
             console.log("Content Added" + "\n");
         }
-    })
+    });
 }
