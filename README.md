@@ -54,7 +54,7 @@ LIRI also stores the information that the user has search by utilizing a text lo
 
 ![text log](https://github.com/jvalentine1/liri-node-app/blob/master/images/log%20text%20gif.2019-05-19%2014_30_12.gif)
 
-## Setting up you machine 
+## Setting up your machine 
 
 In order for Developers to access this application they will need to download the following npm packages. 
 
