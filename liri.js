@@ -1,6 +1,6 @@
-require("dotenv").config();
-var keys = require("./keys.js");
-var spotify = new Spotify(keys.spotify);
+// require("dotenv").config();
+// var keys = require("./keys.js");
+// var spotify = new Spotify(keys.spotify);
 
 var axios = require("axios");
 var moment = require("moment");
@@ -18,7 +18,7 @@ if(search === show) {
 else if (search === song) {
     spotifySearch();
 }
-else if (search === movie); {
+else if (search === movie) {
     movieSearch();
 }
 else if (search === doIt) {
