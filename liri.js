@@ -48,7 +48,7 @@ function bandInTown() {
         console.log(showInfo);
         console.log("\n");
 
-        logTxt();
+        logTxt(showInfo);
     });
 }
 
@@ -73,7 +73,7 @@ function spotifySearch(term) {
           console.log(trackInfo);
           console.log("\n");
 
-          logTxt();
+          logTxt(trackInfo);
     });
 }
 
@@ -100,7 +100,7 @@ function movieSearch() {
             console.log(movieInfo);
             console.log("\n");
 
-            logTxt();
+            logTxt(movieInfo);
         });
     }
     else {
@@ -125,7 +125,7 @@ function movieSearch() {
             console.log(movieInfo);
             console.log("\n");
 
-            logTxt();
+            logTxt(movieInfo);
         });
     }
 }
@@ -140,4 +140,8 @@ function doWhatItSays() {
         spotifySearch(response[1]);
 
     });
+}
+
+function logTxt(data) {
+    console.log(data);
 }
