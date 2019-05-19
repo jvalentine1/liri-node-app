@@ -1,7 +1,9 @@
-// require("dotenv").config();
-// var keys = require("./keys.js");
-// var spotify = new Spotify(keys.spotify);
+require("dotenv").config();
+var keys = require("./keys.js");
+var Spotify = require("node-spotify-api");
+var spotify = new Spotify(keys.spotify);
 
+var fs = require("fs");
 var axios = require("axios");
 var moment = require("moment");
 
@@ -16,7 +18,7 @@ if(search === show) {
     bandInTown();
 }
 else if (search === song) {
-    spotifySearch();
+    spotifySearch(term);
 }
 else if (search === movie) {
     movieSearch();
@@ -47,10 +49,27 @@ function bandInTown() {
     });
 }
 
-function spotifySearch() {
-    console.log("spot song");
+function spotifySearch(term) {
 
+    spotify.search({type: 'track', query: term}, function(err, data) {
 
+        if (err) {
+            return console.log('Error occurred: ' + err);
+          }
+        
+          var response = data.tracks.items[0].album;
+
+          var trackInfo = [
+              "Artist: " + response.artists[0].name,
+              "Title: " + term,
+              "Song Preview: " + data.tracks.items[0].preview_url,
+              "Album: " + response.name
+          ].join("\n");
+
+          console.log("\n");
+          console.log(trackInfo);
+          console.log("\n");
+    });
 }
 
 function movieSearch() {
@@ -101,5 +120,12 @@ function movieSearch() {
 }
 
 function doWhatItSays() {
-    console.log("do what it says");
+    fs.readFile("random.txt", "UTF-8", function(err, data) {
+        if (err) {
+            return console.log('Error occurred: ' + err);
+        }
+
+        var response = data.split('\"');
+        spotifySearch(response[1]);
+    });
 }
