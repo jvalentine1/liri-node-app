@@ -23,3 +23,11 @@ To access the bands in town api with LIRI the user simply has to type in the com
 ![bands in town](https://github.com/jvalentine1/liri-node-app/blob/master/images/Band-%20in-town-Gif.2019-05-18_17_21_39.gif)
 
 LIRI will then provide concert information about the requested artist. 
+
+#### Spotify Search 
+
+LIRI allows a user to access spotify track information by typing in *spotify-this-song*, and then provide LIRI with the song of interest as demonstrated below.
+
+![spotify](https://github.com/jvalentine1/liri-node-app/blob/master/images/spotify%20song%20search%20gif.2019-05-19%2013_26_48.gif)
+
+LIRI will then provide track details and a preview url.
