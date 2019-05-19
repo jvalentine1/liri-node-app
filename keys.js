@@ -5,3 +5,4 @@ exports.spotify = {
   secret: process.env.SPOTIFY_SECRET
 };
 
+//this page provides the spotify api with your unique client id and secret

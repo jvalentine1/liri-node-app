@@ -1,20 +1,21 @@
+// this command requires and configures the unique information in your .env file
 require("dotenv").config();
-
+// these variables and commands retrieve information from exterior folders to pass security checks by the spotify api
 var keys = require("./keys.js");
 var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
-
+// these commands retrieve information from other neccessary node packages
 var fs = require("fs");
 var axios = require("axios");
 var moment = require("moment");
-
+// these variables take in user input and declare arguments to send to conditionals
 var search = process.argv[2];
 var term = process.argv.slice(3).join(" ");
 var show = "concert-this";
 var song = "spotify-this-song";
 var movie = "movie-this";
 var doIt = "do-what-it-says";
-
+// these conditionals allow the appropriate function to be called based off of user input
 if(search === show) {
     bandInTown();
 }
@@ -27,7 +28,7 @@ else if (search === movie) {
 else if (search === doIt) {
     doWhatItSays();
 }
-
+// this function accesses the bands in town api using axios
 function bandInTown() {
     
     var artist = term;
@@ -51,7 +52,7 @@ function bandInTown() {
         logTxt(showInfo);
     });
 }
-
+// this function accesses the spotify api using the node package for spotify api
 function spotifySearch(term) {
 
     spotify.search({type: 'track', query: term}, function(err, data) {
@@ -76,7 +77,7 @@ function spotifySearch(term) {
           logTxt(trackInfo);
     });
 }
-
+// this function accesses the omdb api using axios
 function movieSearch() {
     if (term === "") {
         var movieName = "mr.nobody"
@@ -129,7 +130,7 @@ function movieSearch() {
         });
     }
 }
-
+// this function accesses the the random.txt file's default information and sends it to the spotify function
 function doWhatItSays() {
     fs.readFile("random.txt", "UTF-8", function(err, data) {
         if (err) {
@@ -141,7 +142,7 @@ function doWhatItSays() {
 
     });
 }
-
+// this function stores the requested data from the user in an alternate text file.
 function logTxt(data) {
     fs.appendFile("log.txt", data, function(err) {
         if(err) {
